@@ -1,10 +1,21 @@
-const { create } = require("handlebars");
+const { conectarDB, desconectarDB }= require("../db/connection");
+const Product = require("../db/schemas/productSchema");
 
-const getAll = async (reque,res) => {
-    res.json({message:"Las remeras"});
+const getAll = async (req,res) => {
+    try
+    {
+        await conectarDB();
+        const products = await Product.find({});
+        await desconectarDB();
+        res.json(products);
+    } catch (error)
+    {
+        console.log (error);
+        res.json({message:"no se llamaron a los productos"});
+        
+    }
 }
-
-const Create = async (reque,res) => {
+const create = async (req,res) => {
     res.json({message:"Creando camiseta"});
 }
 

@@ -1,9 +1,7 @@
-require ('dontenv').config();
+require ('dotenv').config();
 const express =require ('express');
 const app = express();
-const {conectarDB, desconectarDB}= require("./db/connection");
-const product= require
-const productosControlador = require ('./server/controllers/controllers/productControllers');
+const productosControlador = require ('./server/controllers/productControllers');
 
 app.get('/api/productos', productosControlador.getAll );
 

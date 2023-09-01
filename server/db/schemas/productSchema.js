@@ -2,14 +2,14 @@ const mongoose= require ("mongoose");
 const {Schema, model} =mongoose;
 
 const productSchema =new Schema ({
-    modelo:string,
+    modelo:String,
     anio:Number,
     stock:Number,
-    talle:string,
+    talle:String,
     cantidad: Number,
     precio: Number,
-    equipo: string,
-    img_url: string,
+    equipo: String,
+    img_url: String,
 });
 
 const product = model ("Product", productSchema);
