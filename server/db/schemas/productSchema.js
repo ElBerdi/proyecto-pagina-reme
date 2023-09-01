@@ -1,5 +1,5 @@
 const mongoose= require ("mongoose");
-const {schemas, model} =mongoose;
+const {Schema, model} =mongoose;
 
 const productSchema =new Schema ({
     modelo:string,
@@ -12,8 +12,6 @@ const productSchema =new Schema ({
     img_url: string,
 });
 
-const productos_schema = model ("Product", productSchema);
+const product = model ("Product", productSchema);
 
-module.exports={
-    productos_schema
-};
+module.exports= product;
