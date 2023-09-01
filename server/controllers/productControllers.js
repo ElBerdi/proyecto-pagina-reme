@@ -19,7 +19,6 @@ const getAll = async (req, res) => {
     }
 }
 
-
 const create = async (req, res) => {
     try {
         const {modelo,anio,stock,talle,cantidad,precio,equipo,img_url} = req.body;
