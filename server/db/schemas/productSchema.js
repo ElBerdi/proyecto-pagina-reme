@@ -12,6 +12,6 @@ const productSchema =new Schema ({
     img_url: String,
 });
 
-const product = model ("Product", productSchema);
+const product = model ("remera", productSchema);
 
 module.exports= product;

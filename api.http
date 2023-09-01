@@ -1,0 +1,13 @@
+POST http://localhost:8008/api/producto
+content-type: application/json
+
+{
+    "modelo":"libertadores 2003",
+    "anio":2003,
+    "stock":3,
+    "talle":"L",
+    "cantidad": 1,
+    "precio": 22,
+    "equipo": "Boca",
+    "img_url": "String"
+}

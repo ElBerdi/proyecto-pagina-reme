@@ -3,6 +3,8 @@ const express =require ('express');
 const app = express();
 const productosControlador = require ('./server/controllers/productControllers');
 
+app.use (express.json());
+
 app.get('/api/productos', productosControlador.getAll );
 
 app.post('/api/producto', productosControlador.create );
