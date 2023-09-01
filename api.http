@@ -11,3 +11,14 @@ content-type: application/json
     "equipo": "Boca",
     "img_url": "String"
 }
+###
+POST http://localhost:8008/api/pedido
+content-type: application/json
+
+{
+    "nombre":"maxi",
+    "apellido":"berdichevsky",
+    "direccion":"calle falsa",
+    "altura":131,
+    "precio":22
+}

@@ -1,8 +1,6 @@
-const {
-    conectarDB,
-    desconectarDB
-} = require("../db/connection");
+const {conectarDB,desconectarDB} = require("../db/connection");
 const Product = require("../db/schemas/productSchema");
+
 
 const getAll = async (req, res) => {
     try {
@@ -17,7 +15,7 @@ const getAll = async (req, res) => {
         });
 
     }
-}
+};
 
 const create = async (req, res) => {
     try {
@@ -34,7 +32,7 @@ const create = async (req, res) => {
         console.log(error);
         res.json({message:"no se creo nada"});
     }
-}
+};
 
 module.exports = {
     getAll,
